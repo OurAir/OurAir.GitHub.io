@@ -53,7 +53,12 @@ section {
 */
 
 
-
+.content {
+	/*display:table-cell;*/
+        position:relative;
+	vertical-align:middle;
+	text-align:center;
+}
 
 #bg {
   position: fixed; 
