@@ -13,10 +13,44 @@
 </style>
 </head>
 <body>
+<style>
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:20%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+</style>
+
+
+<div id='legend' style='display:none;'>
+  <strong>Legend</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#63B6E5;'></span>
+    <span style='background:#EAF7CA;'></span>
+    <span style='background:#F5C272;'></span>
+    <span style='background:#F86767;'></span>
+    <span style='background:#9C89CC;'></span>
+    <label>Low</label>
+    <label>Moderate</label>
+    <label>Insufficient</label>
+    <label>High</label>
+    <label>Very high</label>
+   
+</div>
+
+   
+   
+   
 <div id='map'></div>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Vuc29yd2ViIiwiYSI6IjdEcVRhMDgifQ.lZWJb1QyLpsJ8Dzdc3M5tw';
 L.mapbox.map('map', 'sensorweb.ob21f3ja');
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
 </script>
 
 <script type="text/javascript">
